@@ -10,17 +10,19 @@ IEEE Conference on Computer Vision and Pattern Recognition Workshop, ([NTIRE 201
 * [Python 3.5+](https://www.continuum.io/downloads)
 * [TensorFlow 1.8](https://www.tensorflow.org/)
 
-## Train_Model
+## Train the Model
 * The Installation completely the same as our dependencies. Make sure you have correctly installed before using our code.
-* Download the align & cropped version of [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset for training and testing
+* Download the aligned version of [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset for training and testing
 * Preprocess the training face images, including detection, alignment, etc. Here we strongly recommend [MTCNN](https://github.com/kpzhang93/MTCNN_face_detection_alignment), which is an effective and efficient open-source tool for face detection and alignment.
 * Put aligned images under "./data/CelebA"
-* For L2 version : bash train.sh #NUM_GPU, For L2 + GAN version :  bash train_gan.sh #NUM_GPU
+* For L2 version : bash train.sh #GPU
+* For L2 + GAN version :  bash train_gan.sh #GPU
 
-## Inference_Model
-* bash test.sh #NUM_GPU
-* For evaluation : run test_psnr.m & test_ssim.m on Matlab
+## Inference the Model
+* bash test.sh #GPU
+* For PSNR evaluation : run test_psnr.m on Matlab
+* For SSIM evaluation : run test_ssim.m on Matlab
 
-## To Do
+## TO DO
 * Add auxilary classifier loss
-* Replace BN in discriminator with SN
+* Replace BathcNorm in discriminator with SpectralNorm
