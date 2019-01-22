@@ -25,4 +25,4 @@ IEEE Conference on Computer Vision and Pattern Recognition Workshop, ([NTIRE 201
 
 ## TO DO
 * Add auxilary classifier loss
-* Replace BathcNorm in discriminator with SpectralNorm
+* Replace BatchNorm in discriminator with SpectralNorm
