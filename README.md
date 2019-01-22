@@ -13,7 +13,7 @@ IEEE Conference on Computer Vision and Pattern Recognition Workshop, ([NTIRE 201
 ## Train the Model
 * The Installation completely the same as our dependencies. Make sure you have correctly installed before using our code.
 * Download the aligned version of [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset for training and testing
-* Preprocess the training face images, including detection, alignment, etc. Here we strongly recommend [MTCNN](https://github.com/kpzhang93/MTCNN_face_detection_alignment), which is an effective and efficient open-source tool for face detection and alignment.
+* Preprocess the training face images to 112 X 96, including detection, alignment, etc. Here we strongly recommend [MTCNN](https://github.com/kpzhang93/MTCNN_face_detection_alignment), which is an effective and efficient open-source tool for face detection and alignment.
 * Put aligned images under "./data/CelebA"
 * For L2 version : bash train.sh #GPU
 * For L2 + GAN version :  bash train_gan.sh #GPU
