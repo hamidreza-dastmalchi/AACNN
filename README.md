@@ -6,6 +6,10 @@ Tensorflow Inplementation for AACNN : Attribute Augmented Convolutional Neural N
 <sup>1 </sup>National Taiwan University, <sup>2 </sup>The University of Texas at Austin <br/>
 IEEE Conference on Computer Vision and Pattern Recognition Workshop, ([NTIRE 2018](http://www.vision.ee.ethz.ch/ntire18/))
 <br/>
+
+## Visual Results
+![image](https://github.com/steven413d/AACNN/blob/master/img/fig1.png)
+![image](https://github.com/steven413d/AACNN/blob/master/img/fig2.png)
 ## Dependencies
 * [Python 3.5+](https://www.continuum.io/downloads)
 * [TensorFlow 1.8](https://www.tensorflow.org/)
