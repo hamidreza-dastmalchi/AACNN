@@ -1,7 +1,6 @@
 import os
 import numpy as np
 from time import gmtime, strftime
-
 from image_ops import get_image, save_image, save_images
 
 def generate_image(aacnn):
@@ -18,28 +17,13 @@ def generate_image(aacnn):
     # load dataset
     list_file = os.path.join(FLAGS.data_dir, 'Img_test.txt')
     #list_file = 'attribute_testset/img_19.txt'
-    if os.path.exists(list_file):
+    assert os.path.exists(list_file), "no testing list"
         # load from file when found
         print ("Using training list: {0}".format(list_file))
         with open(list_file, 'r') as f:
             data = [os.path.join(FLAGS.data_dir,
                                  FLAGS.dataset, l.strip()) for l in f]
             #data = [l.strip()  for l in f]
-    else:
-        # recursively walk dataset directory to get images
-        data = []
-        dataset_dir = os.path.join(FLAGS.data_dir, FLAGS.dataset)
-        for root, dirnames, filenames in os.walk(dataset_dir):
-            for filename in fnmatch.filter(filenames, '*.{0}'.format(FLAGS.image_ext)):
-                data.append(os.path.join(root, filename))
-        shuffle(data)
-
-        # save to file for next time
-        with open(list_file, 'w') as f:
-            for l in data:
-                line = l.replace(dataset_dir + os.sep, '')
-                f.write('{0}\n'.format(line))
-
     assert len(data) > 0, "found 0 training data"
     print ("Found {0} training images.".format(len(data)))
 
